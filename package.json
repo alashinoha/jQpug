@@ -1,6 +1,6 @@
 {
   "name": "jqpug",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "create jQuery Object with pug style string.",
   "main": "index.js",
   "dependencies": {
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alashino/jQpug.git"
+    "url": "git+https://github.com/alashinoha/jQpug.git"
   },
   "keywords": [
     "typescript",
@@ -52,10 +52,10 @@
     "pug",
     "mit"
   ],
-  "author": "alashino",
+  "author": "alashinoha",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alashino/jQpug/issues"
+    "url": "https://github.com/alashinoha/jQpug/issues"
   },
-  "homepage": "https://github.com/alashino/jQpug#readme"
+  "homepage": "https://github.com/alashinoha/jQpug#readme"
 }

@@ -6,6 +6,20 @@ pug形式でstringを渡すと、その通りにjQueryオブジェクトにし�
 
 ※完全サポートじゃないです！
 
+## 使うための準備
+
+HTMLに普通に読み込む場合。
+当然ですが、jQueryが必要です。
+```html
+<script src="./jquery.min.js"></script>
+<script src="../dist/jqpug.min.js"></script>
+```
+
+npmでもはいります。
+```bash
+npm install --save-dev jquery @type/jquery jqpug
+```
+
 ## 簡単なサンプル
 
 一行のpugにだけ対応しています。
@@ -18,7 +32,7 @@ jQuery("#target").append(
 
 // pugっぽいので書いたとき
 jQuery("#target").append(
-    jp("span.some_class(title=サンプル) こんにちわ")
+    jqpug("span.some_class(title=サンプル) こんにちわ")
 );
 ```
 短く書けますね！
@@ -28,9 +42,9 @@ jQuery("#target").append(
 ### 連続で作成する例
 
 ```javascript
-jp("section", [
-    jp("h4 Hello World!", jp("span.badge 4")),
-    jp("p 吾輩はねこである"),
+jqpug("section", [
+    jqpug("h4 Hello World!", jqpug("span.badge 4")),
+    jqpug("p 吾輩はねこである"),
 ]);
 ```
 上記のように書くと下記のようなものができます。
@@ -46,16 +60,16 @@ jp("section", [
 ### イベントなどをつける例
 
 ```javascript
-jp("section", [
-    jp("h4 Click Smple"),
-    jp("a", {
+jqpug("section", [
+    jqpug("h4 Click Smple"),
+    jqpug("a", {
         attr: {
-            href: "http://google.co.jp",
+            href: "http://google.co.jqpug",
             target: "_blank",
         },
         text: "jump to google site!",
     }),
-    jp("button", {
+    jqpug("button", {
         attr: {
             type: "button",
         },
@@ -71,7 +85,7 @@ button要素にはイベントがつきます。
 ```html
 <section>
     <h4>Click Smple</h4>
-    <a href="http://google.co.jp" target="_blank">jump to google site!</a>
+    <a href="http://google.co.jqpug" target="_blank">jump to google site!</a>
     <button type="button">click then console.log('hoge')</button>
 </section>
 ```
@@ -79,7 +93,7 @@ button要素にはイベントがつきます。
 ## 仕様
 
 ```typescript
-const $obj = jp(pugString: string, options: string | number | JQuery | Array<JQuery> | JQpugOptions);
+const $obj = jqpug(pugString: string, options: string | number | JQuery | Array<JQuery> | JQpugOptions);
 ```
 
 ### pugString: string
@@ -93,11 +107,11 @@ const $obj = jp(pugString: string, options: string | number | JQuery | Array<JQu
 第二要素にstring、もしくはnumberを設定した場合は生成したjQuery要素に対してテキストとして設定されます。pugのストリングに含めることでも同じことができます。
 
 ```javascript
-var hoge1 = jp("p", "こんにちは"); // <p>こんにちは</p>
-var hoge2 = jp("p こんにちは"); // <p>こんにちは</p>
+var hoge1 = jqpug("p", "こんにちは"); // <p>こんにちは</p>
+var hoge2 = jqpug("p こんにちは"); // <p>こんにちは</p>
 
-var moge1 = jp("p", 100); // <p>100</p>
-var moge2 = jp("p 100"); // <p>100</p>
+var moge1 = jqpug("p", 100); // <p>100</p>
+var moge2 = jqpug("p 100"); // <p>100</p>
 ```
 
 #### JQuery | Array\<JQuery\>
@@ -109,7 +123,7 @@ var moge2 = jp("p 100"); // <p>100</p>
 
 sample
 ```javascript
-var $obj = jp("div", {
+var $obj = jqpug("div", {
     class: "panel panel-default",
     attr: {
         title: "panelです",
@@ -119,8 +133,8 @@ var $obj = jp("div", {
     },
     text: "こんにちわ",
     content: [
-        jp("div.panel-title パネルのタイトルです"),
-        jp("div.panel-body パネルのボディです"),
+        jqpug("div.panel-title パネルのタイトルです"),
+        jqpug("div.panel-body パネルのボディです"),
     ],
     click: ($self) => {
         console.log($self);

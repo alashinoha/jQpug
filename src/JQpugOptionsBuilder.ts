@@ -4,13 +4,13 @@ export type JQpugOptions = {
     css?: { [key: string]: string | number };
     text?: string | number;
     html?: string;
-    content?: EnableContentType;
+    content?: JQpugOptionContentType;
     click?: ($self: JQuery) => void;
 };
 
 export type JQpugOptionsBuilderOptions = string | number | JQpugOptions | JQuery | Array<JQuery>;
 
-export type EnableContentType = JQuery | Array<JQuery>;
+export type JQpugOptionContentType = JQuery | Array<JQuery>;
 
 export class jQpugOptionsBuilderClass {
 
@@ -81,7 +81,7 @@ export class jQpugOptionsBuilderClass {
         $elem.html(html);
     }
 
-    protected addContent($elem: JQuery, content: EnableContentType | undefined): void {
+    protected addContent($elem: JQuery, content: JQpugOptionContentType | undefined): void {
         if (content === undefined) return;
         if (content instanceof Array) {
             content.forEach((elem) => {

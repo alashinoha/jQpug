@@ -2,6 +2,12 @@
   "compilerOptions": {
     "sourceMap": true,
     "target": "es5",
-    "module": "es2015"
-  }
+    "module": "es2015",
+    "esModuleInterop": true,
+    "outDir": "./dist/",
+    "declaration": true
+  },
+  "include": [
+    "src"
+  ]
 }

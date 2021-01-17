@@ -1,5 +1,5 @@
 import {
-    EnableContentType,
+    JQpugOptionContentType,
     JQpugOptions,
     jQpugOptionsBuilderClass,
     JQpugOptionsBuilderOptions
@@ -35,7 +35,7 @@ class JQpugOptionsBuilderClassImpl extends jQpugOptionsBuilderClass {
         super.addHtml($elem, html);
     }
 
-    addContent($elem: JQuery, content: EnableContentType | undefined): void {
+    addContent($elem: JQuery, content: JQpugOptionContentType | undefined): void {
         super.addContent($elem, content);
     }
 

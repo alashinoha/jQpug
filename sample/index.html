@@ -13,22 +13,22 @@
 <script>
     (function () {
         jQuery("#place1").append(
-            jp("main", [
-                jp("section Hello"),
-                jp("section.hoge.moge クラス"),
-                jp("section.hoge.moge(title=fuga) title"),
-                jp("section(title=fuga, param=hoge=moge) こんにちわ"),
-                jp("input(type=text, placeholder=アイウエオ, value=hoge)"),
-                jp("section.hoge.moge こんにちわ"),
-                jp("section.hoge.moge こんにちわ",
-                    jp("div 小要素", [
-                        jp("span 孫要素1"),
-                        jp("span 孫要素2"),
-                        jp("span 孫要素3")
+            jqpug("main", [
+                jqpug("section Hello"),
+                jqpug("section.hoge.moge クラス"),
+                jqpug("section.hoge.moge(title=fuga) title"),
+                jqpug("section(title=fuga, param=hoge=moge) こんにちわ"),
+                jqpug("input(type=text, placeholder=アイウエオ, value=hoge)"),
+                jqpug("section.hoge.moge こんにちわ"),
+                jqpug("section.hoge.moge こんにちわ",
+                    jqpug("div 小要素", [
+                        jqpug("span 孫要素1"),
+                        jqpug("span 孫要素2"),
+                        jqpug("span 孫要素3")
                     ])
                 ),
-                jp("p pだよ", {
-                    content: jp("button(type=button, title=ボタンをクリック！) ボタンです", {
+                jqpug("p pだよ", {
+                    content: jqpug("button(type=button, title=ボタンをクリック！) ボタンです", {
                         click: () => {
                             alert("ボタンがクリックされました！");
                         },

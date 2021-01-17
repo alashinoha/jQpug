@@ -1,3 +1,3 @@
-import {jpug} from "./src";
+import {jqpug} from "./src/jqpug";
 
-module.exports = jpug;
+module.exports = jqpug;

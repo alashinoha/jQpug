@@ -1,9 +1,9 @@
-import JQpugPugFactory, {JQpugPugFactoryClass} from "./JQpugPugFactory";
-import jQpugOptionsBuilder, {EnableContentType} from "./JQpugOptionsBuilder";
+import JQpugPugFactory from "./JQpugPugFactory";
+import jQpugOptionsBuilder, {JQpugOptionsBuilderOptions} from "./JQpugOptionsBuilder";
 
 class JQpugFactoryClass {
 
-    create(pug: string, options: EnableContentType = undefined): JQuery {
+    create(pug: string, options: JQpugOptionsBuilderOptions = undefined): JQuery {
         const $elem = JQpugPugFactory.create(pug);
         if (options !== undefined) {
             jQpugOptionsBuilder.build($elem, options);

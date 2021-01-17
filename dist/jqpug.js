@@ -54,17 +54,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/jpug.ts":
-/*!*********************!*\
-  !*** ./src/jpug.ts ***!
-  \*********************/
+/***/ "./src/jqpug.ts":
+/*!**********************!*\
+  !*** ./src/jqpug.ts ***!
+  \**********************/
 /*! namespace exports */
-/*! export jpug [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"jpug\": () => /* binding */ jpug\n/* harmony export */ });\n/* harmony import */ var _JQpugFactory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./JQpugFactory */ \"./src/JQpugFactory.ts\");\n\nvar jpug = function (pug, options) {\n    if (options === void 0) { options = undefined; }\n    return _JQpugFactory__WEBPACK_IMPORTED_MODULE_0__.default.create(pug, options);\n};\nwindow[\"jp\"] = jpug;\n\n\n//# sourceURL=webpack://jqpug/./src/jpug.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _JQpugFactory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./JQpugFactory */ \"./src/JQpugFactory.ts\");\n\nvar jqpug = function (pug, options) {\n    if (options === void 0) { options = undefined; }\n    return _JQpugFactory__WEBPACK_IMPORTED_MODULE_0__.default.create(pug, options);\n};\nwindow[\"jqpug\"] = jqpug;\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (jqpug);\n\n\n//# sourceURL=webpack://jqpug/./src/jqpug.ts?");
 
 /***/ })
 
@@ -125,7 +125,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /************************************************************************/
 /******/ 	// startup
 /******/ 	// Load entry module
-/******/ 	__webpack_require__("./src/jpug.ts");
+/******/ 	__webpack_require__("./src/jqpug.ts");
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;

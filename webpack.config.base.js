@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './src/jpug.ts',
+    entry: './src/jqpug.ts',
     externals: {
         "jquery": 'jQuery',
     },

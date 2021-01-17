@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <script src="./jquery.min.js"></script>
+    <script src="../dist/jqpug.min.js"></script>
+</head>
+<body>
+<h1>Index</h1>
+<div id="place1"></div>
+</body>
+<script>
+    (function () {
+        jQuery("#place1").append(
+            jp("main", [
+                jp("section Hello"),
+                jp("section.hoge.moge クラス"),
+                jp("section.hoge.moge(title=fuga) title"),
+                jp("section(title=fuga, param=hoge=moge) こんにちわ"),
+                jp("input(type=text, placeholder=アイウエオ, value=hoge)"),
+                jp("section.hoge.moge こんにちわ"),
+                jp("section.hoge.moge こんにちわ",
+                    jp("div 小要素", [
+                        jp("span 孫要素1"),
+                        jp("span 孫要素2"),
+                        jp("span 孫要素3")
+                    ])
+                ),
+                jp("p pだよ", {
+                    content: jp("button(type=button, title=ボタンをクリック！) ボタンです", {
+                        click: () => {
+                            alert("ボタンがクリックされました！");
+                        },
+                    }),
+                    click: () => {
+                        alert("P要素がクリックされました！");
+                    },
+                }),
+            ])
+        );
+    })();
+</script>
+</html>

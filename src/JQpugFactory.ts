@@ -3,7 +3,7 @@ import jQpugOptionsBuilder, {JQpugOptionsBuilderOptions} from "./JQpugOptionsBui
 
 class JQpugFactoryClass {
 
-    create(pug: string, options: JQpugOptionsBuilderOptions = undefined): JQuery {
+    create(pug: string, options?: JQpugOptionsBuilderOptions): JQuery {
         const $elem = JQpugPugFactory.create(pug);
         if (options !== undefined) {
             jQpugOptionsBuilder.build($elem, options);

@@ -1,6 +1,6 @@
 {
   "name": "jqpug",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "create jQuery Object with pug style string.",
   "license": "MIT",
   "author": "alashinoha",
@@ -12,10 +12,10 @@
   "bugs": {
     "url": "https://github.com/alashinoha/jQpug/issues"
   },
-  "main": "index.js",
-  "types": "dist/jqpug.d.ts",
+  "main": "module/jqpug.js",
+  "types": "module/jqpug.d.ts",
   "files": [
-    "dist"
+    "module"
   ],
   "keywords": [
     "typescript",
@@ -28,19 +28,21 @@
     "jquery": "^3.5.1"
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.4",
     "@types/jest": "^26.0.16",
+    "@types/jquery": "^3.5.4",
     "jest": "^26.6.3",
-    "typescript": "^4.1.2",
+    "prettier": "^2.2.1",
     "ts-jest": "^26.4.4",
-    "ts-node": "^9.1.0",
     "ts-loader": "^8.0.11",
+    "ts-node": "^9.1.0",
+    "typescript": "^4.1.2",
     "webpack": "^5.9.0",
     "webpack-cli": "^4.2.0",
     "webpack-merge": "^5.5.0"
   },
   "scripts": {
     "test": "jest",
+    "build_module": "tsc",
     "build_production": "./node_modules/.bin/webpack  --config webpack.config.production.js",
     "build_develop": "./node_modules/.bin/webpack --config webpack.config.develop.js"
   },

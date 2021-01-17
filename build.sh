@@ -5,12 +5,20 @@ DIR_CURRENT=$(cd $(dirname $0) && pwd)
 
 pushd ${DIR_CURRENT} > /dev/null
 
+    source ~/.bash_profile
+
     date
 
-    source ~/.bash_profile
-    npm run build_develop
+    mv tsconfig.module.json tsconfig.json
+    npm run build_module
+    mv tsconfig.json tsconfig.module.json
 
+    date
+
+    mv tsconfig.dist.json tsconfig.json
+    npm run build_develop
     npm run build_production
+    mv tsconfig.json tsconfig.dist.json
 
     date
 

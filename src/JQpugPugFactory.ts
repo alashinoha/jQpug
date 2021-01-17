@@ -56,7 +56,9 @@ export class JQpugPugFactoryClass {
                     if (keyValue.length > 1) {
                         const key = keyValue.shift();
                         const value = keyValue.join("=");
-                        attr[key] = value;
+                        if (key !== undefined) {
+                            attr[key] = value;
+                        }
                     }
                 });
             });
